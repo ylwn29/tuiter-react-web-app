@@ -3,11 +3,12 @@ import WhoToFollowList from "../WhoToFollowList/index.js";
 import ExploreComponent from "./ExploreComponent.js";
 
 function exploreComponent() {
+    let active = 'Explore';
     $('#wd-explore').append(`
      <div class="row mt-2">
        <div class="col-2 col-md-2 col-lg-1 col-xl-2" id="nav">
     <!--    <h3>NavigationSidebar</h3>-->
-            ${NavigationSidebar()}
+            ${NavigationSidebar(active)}
        </div>
        
        <div class="col-10 col-lg-7 col-xl-6">

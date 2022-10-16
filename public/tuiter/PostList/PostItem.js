@@ -1,4 +1,20 @@
 const PostItem = (post) => {
+    // change the color of partial text
+    let glance = post.glance;
+    let newGlance = glance;
+    if (post.markText) {
+        newGlance = glance.replace(post.markText, '<span class="text-primary">' + post.markText + '</span>');
+    }
+
+    // hide the empty space when there is no post and make image rounded corner
+    let postImageClass = "rounded-4";
+    let postBodyClass = "d-none";
+    if (post.title || post.text) {
+        postImageClass = "wd-rounded-top";
+        postBodyClass = "";
+    }
+
+
     return (`
         <div class="wd-post">
             <!--B-->
@@ -14,18 +30,18 @@ const PostItem = (post) => {
                 </div>
                 <!--D-->
                 <div class="wd-post-d">
-                    <p>${post.glance}</p>
+                    <p>${newGlance}</p>
                 </div>
                 <div>
                     <!--E-->
                     <div>
-                        <img class="wd-bookmarks-img" src="${post.image}">
+                        <img class="wd-bookmarks-img ${postImageClass}" src="${post.image}">
                     </div>
                     <!--F-->
-                    <div class="wd-post-f">
+                    <div class="wd-post-f ${postBodyClass}">
                         <p class="wd-p-title">${post.title}</p>
                         <p class="wd-p-text">${post.text}</p>
-                        <p class="wd-p-text">&#x1F517; ${post.link}</p>
+                        <p class="wd-p-text">${post.link}</p>
                     </div>
                 </div>
                 <!--G-->
