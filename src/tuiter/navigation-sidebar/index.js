@@ -7,6 +7,9 @@ const NavigationSidebar = () => {
     const {pathname} = useLocation();
     const paths = pathname.split('/')
     const active = paths[2];
+    // if (paths.length < 3) {
+    //     active = 'home';
+    // }
 
     return (
         <div className="list-group">
