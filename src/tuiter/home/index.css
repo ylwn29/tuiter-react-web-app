@@ -1,0 +1,150 @@
+body {
+    font-family: "Arial";
+    background-color: black;
+    color: white;
+    border: gray;
+}
+
+.wd-title {
+    font-size: 20px;
+    margin-bottom: 0px;
+}
+
+.wd-handle {
+    color: lightgray;
+    font-size: 13px;
+    padding-bottom: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wd-3-dots {
+    color: gray;
+    padding-right: 0px;
+}
+
+.wd-bookmarks {
+    margin-left: 16px;
+    margin-right: 12px;
+    margin-top: 12px;
+    padding-left: 16px;
+    border: gray solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wd-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+
+.wd-post {
+    margin-left: 16px;
+    margin-right: 12px;
+    padding-top: 12px;
+    padding-left: 16px;
+    border-left: lightgrey solid 1px;
+    border-right: lightgrey solid 1px;
+    border-bottom: lightgrey solid 1px;
+    display: flex;
+}
+
+.wd-post-c {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-post-c p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wd-post-c span {
+    color: lightgray;
+    font-weight: normal;
+}
+
+.wd-post-d {
+    font-size: 15px;
+    max-width: 506px;
+    padding-right: 16px;
+    padding-bottom: 12px;
+    padding-top: 5px;
+}
+
+.wd-post-d p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wd-post-d span {
+    color: #0d6efd;
+}
+
+.wd-main-post {
+    padding-right: 16px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+
+.wd-bookmarks-img {
+    max-width: 100%;
+    /*width: 504px;*/
+    /*height: 264px;*/
+    border-radius: 15px 15px 0px 0px;
+    border: gray solid 1px;
+}
+
+.wd-post-f {
+    font-size: 15px;
+    padding: 12px;
+    border-left: gray solid 1px;
+    border-bottom: gray solid 1px;
+    border-right: gray solid 1px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    max-width: 100%;
+    margin-top: -4px;
+}
+
+.wd-p-text {
+    color: black;
+}
+
+.wd-post-f p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.wd-post-g {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    color: lightgray;
+}
+
+.wd-icon-num-pair {
+    display: flex;
+    color: black;
+}
+
+.wd-icon {
+    padding-right: 12px;
+}
+
+/*.wd-post-g > .wd-icon-selected {*/
+/*    color: red;*/
+/*}*/
+
+.wd-post-g > .wd-icon-num-pair {
+    flex-basis: 100%;
+}
+
+.wd-post-g a {
+    color: lightgray;
+    text-decoration: none;
+}
