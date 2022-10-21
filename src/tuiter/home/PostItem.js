@@ -27,7 +27,7 @@ const PostItem = (
     let glances = post.glance;
     let newGlance = glances;
     if (post.markText) {
-        newGlance = glances.replace('post.markText', '<span style={{color: #0b5ed7}}>post.markText</span>');
+        newGlance = glances.replace(post.markText, '<span style={{color: #0b5ed7}}>' + post.markText + '</span>');
     }
 
     // hide the empty space when there is no post and make image rounded corner
@@ -38,6 +38,11 @@ const PostItem = (
         postBodyClass = "";
     }
 
+    const markKeyword = (glance, markText) => {
+        return (
+            glance.replace(markText, '<span class="text-primary">' + markText + '</span>')
+        )
+    }
 
     return (
         <div className="wd-post">
@@ -53,7 +58,7 @@ const PostItem = (
                 </div>
 
                 <div className="wd-post-d">
-                    <p>{newGlance}</p>
+                    <p dangerouslySetInnerHTML={{__html: newGlance}}></p>
                 </div>
                 <div>
 
