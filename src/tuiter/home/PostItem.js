@@ -38,11 +38,11 @@ const PostItem = (
         postBodyClass = "";
     }
 
-    const markKeyword = (glance, markText) => {
-        return (
-            glance.replace(markText, '<span class="text-primary">' + markText + '</span>')
-        )
-    }
+    // const markKeyword = (glance, markText) => {
+    //     return (
+    //         glance.replace(markText, '<span class="text-primary">' + markText + '</span>')
+    //     )
+    // }
 
     return (
         <div className="wd-post">
