@@ -1,4 +1,4 @@
-const who = [
+[
     {
         "_id": 1,
         "userName": "NASA",
@@ -28,7 +28,5 @@ const who = [
         "userName": "Virgin Galactic",
         "handle": "virgingalactic",
         "avatarIcon": "virgingalactic.png"
-    },
+    }
 ]
-
-export default who;

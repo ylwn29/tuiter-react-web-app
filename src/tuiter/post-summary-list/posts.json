@@ -1,4 +1,4 @@
-const post = [
+[
     {   "_id": 1,
         "topic": "ReactJS",
         "userName": "Web Development",
@@ -28,5 +28,3 @@ const post = [
         "image": "nodejs.png"
     }
 ]
-
-export default post;
