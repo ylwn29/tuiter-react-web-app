@@ -1,30 +1,55 @@
 [
+    {
+        "_id": 234,
+        "topic": "Space",
+        "userName": "SpaceX",
+        "time": "2h",
+        "title": "100s of SpaceX Starships land on Mars after a 6 month journey. 1000s of Martian colonists being building Mars Base 1",
+        "image": "spacex.png",
+        "liked": true,
+        "replies": 123,
+        "retuits": 432,
+        "likes": 345,
+        "handle": "@spacex",
+        "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars."
+    },
     {   "_id": 1,
         "topic": "ReactJS",
         "userName": "Web Development",
         "title": "React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs",
         "time": "2h",
-        "image": "react.png"
+        "image": "react.png",
+        "liked": false,
+        "replies": 35,
+        "retuits": 464,
+        "likes": 767,
+        "handle": "@webdev",
+        "tuit": "Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web applications, electronic businesses, and social network services."
     },
     {   "_id": 2,
         "topic": "JavaScript",
         "userName": "JavaScript",
         "title": "JavaScript is programming language that can run on browsers as well as desktops",
         "time": "1 day",
-        "image": "javascript.png"
+        "image": "javascript.png",
+        "liked": true,
+        "replies": 37,
+        "retuits": 865,
+        "likes": 985,
+        "handle": "@javascript",
+        "tuit": "JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. "
     },
     {   "_id": 3,
         "topic": "jQuery",
-        "userName": "Web Development",
+        "userName": "JQuery",
         "title": "jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation",
         "time": "last week",
-        "image": "jquery.png"
-    },
-    {   "_id": 4,
-        "topic": "NodeJS",
-        "userName": "Web Development",
-        "title": "Node.js can be used on the frontend as well as the backend.",
-        "time": "last month",
-        "image": "nodejs.png"
+        "image": "jquery.png",
+        "liked": true,
+        "replies": 456,
+        "retuits": 126,
+        "likes": 1847,
+        "handle": "@jquery",
+        "tuit": "jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of Aug 2022, jQuery is used by 77% of the 10 million most popular websites. "
     }
 ]

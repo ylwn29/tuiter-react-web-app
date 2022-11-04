@@ -45,9 +45,11 @@ body {
     margin-right: 12px;
     padding-top: 12px;
     padding-left: 16px;
-    border-left: lightgrey solid 1px;
-    border-right: lightgrey solid 1px;
-    border-bottom: lightgrey solid 1px;
+    border: lightgrey solid 1px;
+    border-radius: 3px;
+    /*border-left: lightgrey solid 1px;*/
+    /*border-right: lightgrey solid 1px;*/
+    /*border-bottom: lightgrey solid 1px;*/
     display: flex;
 }
 
