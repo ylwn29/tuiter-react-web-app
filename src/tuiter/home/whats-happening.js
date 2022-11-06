@@ -10,18 +10,18 @@ const WhatsHappening = () => {
             tuit: whatsHappening
         }
         dispatch(createTuit(newTuit));
-        // console.log(whatsHappening);
     }
+
     return (
         <div className="row ms-2 me-2">
             <div className="col-auto">
                 <img src="/images/nasa.png" width={60}/>
             </div>
             <div className="col-10">
-       <textarea value={whatsHappening} placeholder="What's happening?"
-                 className="form-control border-0"
-                 onChange={(event) => setWhatsHappening(event.target.value)}>
-       </textarea>
+                <textarea value={whatsHappening} placeholder="What's happening?"
+                         className="form-control border-0"
+                         onChange={(event) => setWhatsHappening(event.target.value)}>
+                </textarea>
                 <div>
                     <button className="rounded-pill btn btn-primary float-end mt-2 ps-3 pe-3 fw-bold"
                             onClick={tuitClickHandler}>

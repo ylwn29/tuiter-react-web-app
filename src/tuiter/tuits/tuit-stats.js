@@ -29,7 +29,8 @@ const TuitStats = (
                 <div>{tuit.retuits}</div>
             </div>
             <div className="wd-icon-num-pair wd-icon-selected">
-                <div className="wd-icon"><i className="far fa-heart"></i></div>
+                {tuit.liked && <div className="wd-icon text-danger"><i className="bi bi-heart-fill"></i></div>}
+                {!tuit.liked && <div className="wd-icon"><i className="bi bi-heart-fill"></i></div>}
                 <div>{tuit.likes}</div>
             </div>
             <div className="wd-icon-num-pair">
