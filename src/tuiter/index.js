@@ -8,8 +8,6 @@ import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import {Provider} from "react-redux";
-import PostSummaryList from "./post-summary-list";
-import TuitsList from "./tuits";
 import ProfileComponent from "./profile";
 import profileReducer from "./reducers/profile-reducer";
 import EditProfileComponent from "./edit-profile";
