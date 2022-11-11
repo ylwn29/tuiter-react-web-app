@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {createTuitThunk} from "../../services/tuits-thunks";
 import {useDispatch} from "react-redux";
-import nasa from "../images/NASA.png"
+import nasa from "../images/NASA.png";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
