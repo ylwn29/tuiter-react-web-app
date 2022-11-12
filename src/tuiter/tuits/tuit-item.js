@@ -2,6 +2,7 @@ import React from "react";
 import TuitStats from "./tuit-stats";
 import {useDispatch} from "react-redux";
 import {deleteTuitThunk} from "../../services/tuits-thunks";
+import nasa from "../images/NASA.png";
 
 const TuitItem = (
     {
@@ -31,7 +32,7 @@ const TuitItem = (
     return (
         <div className="wd-post">
             <div>
-                <img className="wd-avatar" src={`/images/${tuit.image}`} alt=""/>
+                <img className="wd-avatar" src={nasa} alt=""/>
             </div>
 
             <div className="wd-main-post w-100">
