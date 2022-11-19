@@ -19,62 +19,81 @@ const TuitStats = (
             "tuit": "You want to wake up in the morning and think the future is going to be great - and that’s what being a spacefaring civilization is all about. It’s about believing in the future and thinking that the future will be better than the past. And I can’t think of anything more exciting than going out there and being among the stars",
             "dislikes": 123,
             "disliked": false,
-            // "turnred": false
         }
     }
 ) => {
     const dispatch = useDispatch();
 
+    const clickLikeHeartHandler = () => {
+        const updateLike = {
+            ...tuit,
+            likes: tuit.liked ? tuit.likes - 1 : tuit.likes + 1,
+            liked: !tuit.liked
+        };
+        dispatch(updateTuitThunk(updateLike))
+    }
+
+    const clickDislikeHeartHandler = () => {
+        const updateDislike = {
+            ...tuit,
+            dislikes: tuit.disliked ? tuit.dislikes - 1 : tuit.dislikes + 1,
+            disliked: !tuit.disliked
+        }
+        dispatch(updateTuitThunk(updateDislike))
+    }
+
     return(
-        <div className="wd-post-g">
-            <div className="wd-icon-num-pair">
-                <div className="wd-icon"><i className="fas fa-comment"></i></div>
-                <div>{tuit.replies}</div>
-            </div>
+        <div className="row justify-content-evenly">
+            <button className="text-secondary border-0 bg-transparent text-start col">
+                <i className="bi bi-chat pe-1 pe-sm-2"></i>
+                <span>{tuit.replies}</span>
+            </button>
 
-            <div className="wd-icon-num-pair">
-                <div className="wd-icon"><i className="fas fa-retweet"></i></div>
-                <div>{tuit.retuits}</div>
-            </div>
+            <button className="text-secondary border-0 bg-transparent text-start col">
+                <i className="bi bi-arrow-repeat pe-1 pe-sm-2"></i>
+                <span>{tuit.retuits}</span>
+            </button>
 
-            <div className="wd-icon-num-pair wd-icon-selected">
+            <button className="text-secondary border-0 bg-transparent text-start col" onClick={clickLikeHeartHandler}>
+                {tuit.liked && <i className="bi bi-heart-fill text-danger pe-1 pe-sm-2"></i>}
+                {!tuit.liked && <i className="bi bi-heart pe-1 pe-sm-2"></i>}
+
                 {/*{tuit.liked && <div className="wd-icon text-danger"><i className="bi bi-heart-fill"></i></div>}*/}
-                {/*{!tuit.liked && <div className="wd-icon"><i className="bi bi-heart-fill"></i></div>}*/}
-
-                {tuit.liked && <div className="wd-icon text-danger"><i className="bi bi-heart-fill"></i></div>}
-                {!tuit.liked &&
-                    <div>
-                        <i onClick={() => {
-                            dispatch(updateTuitThunk({
-                                ...tuit,
-                                likes: tuit.likes + 1,
-                            }));
-                        }} className="bi bi-heart-fill me-2"
-                        onChange={(tuit) => {tuit.liked = true}}></i>
-                    </div>
-                }
+                {/*{!tuit.liked &&*/}
+                {/*    <div>*/}
+                {/*        <i onClick={() => {*/}
+                {/*            dispatch(updateTuitThunk({*/}
+                {/*                ...tuit,*/}
+                {/*                likes: tuit.likes + 1,*/}
+                {/*            }));*/}
+                {/*        }} className="bi bi-heart-fill me-2"*/}
+                {/*        onChange={(tuit) => {tuit.liked = true}}></i>*/}
+                {/*    </div>*/}
+                {/*}*/}
                 {tuit.likes}
-            </div>
+            </button>
 
-            <div className="wd-icon-num-pair wd-icon-selected">
-                {tuit.disliked && <div className="wd-icon text-danger"><i className="bi bi-hand-thumbs-down-fill"></i></div>}
-                {!tuit.disliked &&
-                    <div>
-                        <i onClick={() => {
-                            dispatch(updateTuitThunk({
-                                ...tuit,
-                                dislikes: tuit.dislikes + 1
-                            }));
-                        }} className="bi bi-hand-thumbs-down-fill me-2"
-                           onChange={(tuit) => {tuit.disliked = true}}></i>
-                    </div>
-                }
+            <button className="text-secondary border-0 bg-transparent text-start col" onClick={clickDislikeHeartHandler}>
+                {tuit.disliked && <i className="bi bi-hand-thumbs-down-fill pe-1 pe-sm-2"></i>}
+                {!tuit.disliked && <i className="bi bi-hand-thumbs-down pe-1 pe-sm-2"></i>}
+                {/*{tuit.disliked && <div className="wd-icon text-danger"><i className="bi bi-hand-thumbs-down-fill"></i></div>}*/}
+                {/*{!tuit.disliked &&*/}
+                {/*    <div>*/}
+                {/*        <i onClick={() => {*/}
+                {/*            dispatch(updateTuitThunk({*/}
+                {/*                ...tuit,*/}
+                {/*                dislikes: tuit.dislikes + 1*/}
+                {/*            }));*/}
+                {/*        }} className="bi bi-hand-thumbs-down-fill me-2"*/}
+                {/*           onChange={(tuit) => {tuit.disliked = true}}></i>*/}
+                {/*    </div>*/}
+                {/*}*/}
                 {tuit.dislikes}
-            </div>
+            </button>
 
-            <div className="wd-icon-num-pair">
-                <div className="wd-icon"><i className="far fa-share-square"></i></div>
-            </div>
+            <button className=" text-secondary border-0 bg-transparent text-start col">
+                <i className="far fa-share-square pe-1 pe-sm-2"></i>
+            </button>
         </div>
     )
 }

@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {findTuitsThunk} from "../../services/tuits-thunks";
 
 const PostSummaryList = () => {
-    const {posts, loading} = useSelector(state => state.tuitsData)
+    const {tuits, loading} = useSelector(state => state.tuitsData)
     const dispatch = useDispatch();
     useEffect(() => {dispatch(findTuitsThunk())}, [dispatch])
 
@@ -18,8 +18,8 @@ const PostSummaryList = () => {
                 </li>
             }
             {
-                posts && //Fix "cannot read properties of undefined (reading map)" Uncaught TypeError
-                posts.map(post =>
+                tuits && //Fix "cannot read properties of undefined (reading map)" Uncaught TypeError
+                tuits.map(post =>
                     <PostSummaryItem
                         key={post._id} post={post}/> )
             }

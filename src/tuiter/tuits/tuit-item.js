@@ -36,7 +36,7 @@ const TuitItem = (
 
             <div className="wd-main-post w-100">
                 <div className="wd-post-c">
-                    <p><b>{tuit.userName}</b><i className="ps-1 fas fa-check-circle text-primary"></i><span> {tuit.handle} · {tuit.time}</span></p>
+                    <p><b>{tuit.username}</b><i className="ps-1 fas fa-check-circle text-primary"></i><span> {tuit.handle} · {tuit.time}</span></p>
                     <i className="bi bi-x-lg float-end"
                        onClick={() => deleteTuitHandler(tuit._id)}></i>
                 </div>
