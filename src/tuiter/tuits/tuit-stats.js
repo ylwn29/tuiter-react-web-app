@@ -57,8 +57,8 @@ const TuitStats = (
             <button className="text-secondary border-0 bg-transparent text-start col" onClick={clickLikeHeartHandler}>
                 {tuit.liked && <i className="bi bi-heart-fill text-danger pe-1 pe-sm-2"></i>}
                 {!tuit.liked && <i className="bi bi-heart pe-1 pe-sm-2"></i>}
-
                 {/*{tuit.liked && <div className="wd-icon text-danger"><i className="bi bi-heart-fill"></i></div>}*/}
+
                 {/*{!tuit.liked &&*/}
                 {/*    <div>*/}
                 {/*        <i onClick={() => {*/}
@@ -77,6 +77,7 @@ const TuitStats = (
                 {tuit.disliked && <i className="bi bi-hand-thumbs-down-fill pe-1 pe-sm-2"></i>}
                 {!tuit.disliked && <i className="bi bi-hand-thumbs-down pe-1 pe-sm-2"></i>}
                 {/*{tuit.disliked && <div className="wd-icon text-danger"><i className="bi bi-hand-thumbs-down-fill"></i></div>}*/}
+
                 {/*{!tuit.disliked &&*/}
                 {/*    <div>*/}
                 {/*        <i onClick={() => {*/}
