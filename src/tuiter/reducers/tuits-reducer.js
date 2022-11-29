@@ -10,13 +10,13 @@ const initialState = {
 const currentUser = {
     "userName": "NASA",
     "handle": "@nasa",
-    "image": "nasa.png",
+    "image": "NASA.png",
 };
 
 const templateTuit = {
     ...currentUser,
     "topic": "Space",
-    "time": "2h",
+    "time": "Just now",
     "liked": false,
     "replies": 0,
     "retuits": 0,
